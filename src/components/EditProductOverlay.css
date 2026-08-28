@@ -1,0 +1,260 @@
+/* =========================
+   OVERLAY
+========================= */
+
+.edit-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  z-index: 1000;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.edit-modal {
+  width: 100%;
+  max-width: 520px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.18);
+
+  overflow: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.edit-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 22px 24px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.edit-modal-header h2 {
+  margin: 0;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+.edit-modal-header p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+  color: #64748b;
+}
+
+.edit-close-btn {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+  color: #64748b;
+
+  cursor: pointer;
+}
+
+.edit-close-btn:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* =========================
+   BODY
+========================= */
+
+.edit-modal-body {
+  padding: 24px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.edit-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  margin-bottom: 17px;
+}
+
+.edit-form-group label {
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #334155;
+}
+
+.edit-form-group input,
+.edit-form-group select,
+.edit-form-group textarea {
+  width: 100%;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+
+  padding: 10px 12px;
+
+  font-size: 14px;
+
+  color: #0f172a;
+  background: #ffffff;
+
+  outline: none;
+}
+
+.edit-form-group input,
+.edit-form-group select {
+  height: 42px;
+}
+
+.edit-form-group textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.edit-form-group input:focus,
+.edit-form-group select:focus,
+.edit-form-group textarea:focus {
+  border-color: #4f46e5;
+
+  box-shadow:
+    0 0 0 3px rgba(79, 70, 229, 0.08);
+}
+
+/* =========================
+   TWO COLUMN FORM
+========================= */
+
+.edit-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.edit-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 16px 24px;
+
+  border-top: 1px solid #e2e8f0;
+
+  background: #fafafa;
+}
+
+/* =========================
+   CANCEL
+========================= */
+
+.edit-cancel-btn {
+  height: 40px;
+
+  padding: 0 17px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #334155;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.edit-cancel-btn:hover {
+  background: #f8fafc;
+}
+
+/* =========================
+   SAVE
+========================= */
+
+.edit-save-btn {
+  height: 40px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #4f46e5;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.edit-save-btn:hover {
+  background: #4338ca;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 520px) {
+
+  .edit-overlay {
+    padding: 12px;
+  }
+
+  .edit-modal-body {
+    padding: 20px;
+  }
+
+  .edit-modal-header {
+    padding: 18px 20px;
+  }
+
+  .edit-modal-footer {
+    padding: 14px 20px;
+  }
+
+  .edit-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+}
